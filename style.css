@@ -1,0 +1,360 @@
+/* フォント読み込みコーナー */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+/* リセットcss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* リセットcss終了 */
+html {
+  font-size: 20px;
+}
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 200px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+header img{
+  height: 200px;
+  width: auto;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 auto;
+}
+.header-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.header-ul {
+  display: flex;
+}
+.header-ul li a{
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  transition: 0.3s;
+  font-size: 1rem;
+   font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.header-ul li a:hover {
+  color: #b6b6b6;
+}
+main {
+  margin-top: 205px;
+  text-align: center;
+}
+.original-button {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #144cff;
+  font-size: 18px;
+  border-radius: 0px;
+  width: 200px;
+  height: 40px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+  background-color: [object object];
+}
+
+.original-button::before, .original-button::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #144CFF;
+  transition: .3s;
+}
+
+.original-button::before {
+  top: 0;
+}
+
+.original-button::after {
+  bottom: 0;
+}
+
+.original-button:hover::before {
+  transform: translateX(-100%);
+}
+
+.original-button:hover::after {
+  transform: translateX(100%);
+}
+.header-user {
+  display: flex;
+}
+.search-form-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #2589d0;
+    border-radius: 25px;
+}
+
+.search-form-1 input {
+    width: 400px;
+    height: 45px;
+    padding: 5px 15px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1em;
+    outline: none;
+}
+
+.search-form-1 input::placeholder{
+    color: #6b6b6b;
+}
+
+.search-form-1 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 45px;
+    border: none;
+    background-color: #2589d0;
+    cursor: pointer;
+}
+
+.search-form-1 button::after {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23fff'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    content: '';
+}
+/* ナビゲーションメニュー */
+.nav-menu {
+  background-color: #fff; /* メニューの背景色 */
+  color: black; /* メニューテキストの色 */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.menu-list {
+  display: flex;
+  justify-content: center; /* メニューアイテムを中央揃えに */
+}
+.menu-item {
+  border-left: 1px solid #fff; /* メニューアイテムの左ボーダー */
+  position: relative;
+}
+.menu-item:last-child {
+  border-right: 1px solid #fff; /* 最後のメニューアイテムの右ボーダー */
+}
+
+/* メニューアイテムのホバースタイル */
+.menu-item:hover .drop-menu-list {
+  opacity: 1; /* 不透明度を最大に */
+  transition: opacity .3s, visibility .3s; /* アニメーション設定 */
+  visibility: visible; /* 下層メニューを表示 */
+}
+
+.menu-item a {
+  align-items: center;
+  color: black; /* メニューアイテム内のリンクテキストの色 */
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  text-decoration: none; /* リンクの下線を非表示 */
+  width: 250px;
+  transition: 0.3s;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.menu-item a:hover {
+  color: #b6b6b6;/* リンクテキストのホバー時の色 */
+}
+/* ドロップダウンメニュー */
+.drop-menu {
+  position: relative;
+}
+.drop-menu-list {
+  background-color: #fff; /* ドロップダウンメニューの背景色 */
+  left: 0;
+  opacity: 0; /* 不透明度を最小に */
+  position: absolute;
+  top: 100%;
+  transition: opacity .3s, visibility .3s; /* アニメーション設定 */
+  visibility: hidden; /* 下層メニューを非表示 */
+  width: max-content;
+  z-index: 1;
+}
+.categories {
+  text-align: center;
+}
+#categori {
+  font-size: 50px;
+}
+.button-20 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    background-color: #2589d0;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    transition: 0.3s;
+}
+
+.button-20:hover {
+    border: 1px solid #2589d0;
+    background-color: #fff;
+}
+
+.button-20:hover path {
+    fill: #2589d0;
+}
+.toggle-button-1 {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #dddddd;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+.toggle-button-1:has(:checked) {
+    background-color: #4bd865;
+}
+
+.toggle-button-1::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    content: '';
+    transition: left .4s;
+}
+
+.toggle-button-1:has(:checked)::after {
+    left: 50px;
+}
+
+.toggle-button-1 input {
+    display: none;
+}
+.footer-001 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 10px 10px;
+    background-color: #2589d0;
+}
+
+.footer-001__logo {
+    width: 130px;
+    height: 30px;
+}
+
+.footer-001__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1.5em;
+    list-style-type: none;
+    margin: 0 0 .5em;
+    padding: .5em;
+}
+
+.footer-001__link {
+    color: #fff;
+    font-weight: 200;
+    text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.footer-001__copyright {
+    margin: 0;
+    color: #ffffffb3;
+    font-weight: 200;
+    font-size: .8em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+footer p {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
